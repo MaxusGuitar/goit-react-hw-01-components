@@ -1,4 +1,6 @@
-const UserProfile = ({avatar, username, tag, location, stats}) => {
+import PropTypes from "prop-types";
+
+const UserProfile = ({ avatar, username, tag, location, stats }) => {
   return (
     <div className="profile">
       <div className="description">
@@ -27,6 +29,14 @@ const UserProfile = ({avatar, username, tag, location, stats}) => {
       </ul>
     </div>
   );
+}
+// ---------------------для описания типов---------------------- 
+UserProfile.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.object //тут объект, а не число ибо в нём есть несколько элементов
 }
 
 export default UserProfile
