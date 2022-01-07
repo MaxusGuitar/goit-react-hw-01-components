@@ -1,15 +1,11 @@
 import PropTypes from "prop-types";
-import style from "./profile.module.css"
+import style from "./profile.module.css";
 
 const UserProfile = ({ avatar, username, tag, location, stats }) => {
   return (
     <div className={style.profile}>
       <div className={style.description}>
-        <img
-          src={avatar}
-          alt="User avatar"
-          className={style.avatar}
-        />
+        <img src={avatar} alt="User avatar" className={style.avatar} />
         <p className={style.name}>{username}</p>
         <p className={style.tag}>{tag}</p>
         <p className={style.location}>{location}</p>
@@ -30,14 +26,14 @@ const UserProfile = ({ avatar, username, tag, location, stats }) => {
       </ul>
     </div>
   );
-}
-// ---------------------для описания типов---------------------- 
+};
+// ---------------------для описания типов----------------------
 UserProfile.propTypes = {
   avatar: PropTypes.string,
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-  stats: PropTypes.object //тут объект, а не число ибо в нём есть несколько элементов
-}
+  stats: PropTypes.object, //тут объект, а не число ибо в нём есть несколько элементов
+};
 
-export default UserProfile
+export default UserProfile;
