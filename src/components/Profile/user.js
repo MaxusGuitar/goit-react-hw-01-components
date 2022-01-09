@@ -33,7 +33,7 @@ UserProfile.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-  stats: PropTypes.object, //тут объект, а не число ибо в нём есть несколько элементов
+  stats: PropTypes.objectOf(PropTypes.number), //тут объект, а не число ибо в нём есть несколько элементов
 };
 
 export default UserProfile;
